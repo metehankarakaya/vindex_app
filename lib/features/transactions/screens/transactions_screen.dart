@@ -74,6 +74,9 @@ class _TransactionsScreenState extends ConsumerState<TransactionsScreen> {
                   onPressed: () => showModalBottomSheet(
                     context: context,
                     isScrollControlled: true,
+                    constraints: BoxConstraints(
+                      maxHeight: MediaQuery.of(context).size.height * 0.85,
+                    ),
                     builder: (_) => const TransactionFilterSheet(),
                   ),
                 ),
