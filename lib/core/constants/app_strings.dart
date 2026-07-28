@@ -31,4 +31,13 @@ class AppStrings {
   static const transactionsDescriptionHint = 'transactions.description_hint';
 
   static const commonLoading = 'common.loading';
+
+  static const recurringStartDate = 'recurring.start_date';
+  static const recurringEndDateOptional = 'recurring.end_date_optional';
+  static const recurringPickStartDate = 'recurring.pick_start_date';
+  static const recurringPickEndDate = 'recurring.pick_end_date';
+  static const recurringFrequencyDaily = 'recurring.frequency_daily';
+  static const recurringFrequencyWeekly = 'recurring.frequency_weekly';
+  static const recurringFrequencyMonthly = 'recurring.frequency_monthly';
+  static const recurringFrequencyYearly = 'recurring.frequency_yearly';
 }

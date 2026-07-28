@@ -34,5 +34,15 @@
   },
   "common": {
     "loading": "Loading"
+  },
+  "recurring": {
+    "start_date": "Start Date",
+    "end_date_optional": "End Date (optional)",
+    "pick_start_date": "Pick start date",
+    "pick_end_date": "No end date",
+    "frequency_daily": "Daily",
+    "frequency_weekly": "Weekly",
+    "frequency_monthly": "Monthly",
+    "frequency_yearly": "Yearly"
   }
 }

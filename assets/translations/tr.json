@@ -34,5 +34,15 @@
   },
   "common": {
     "loading": "Yükleniyor"
+  },
+  "recurring": {
+    "start_date": "Başlangıç Tarihi",
+    "end_date_optional": "Bitiş Tarihi (opsiyonel)",
+    "pick_start_date": "Başlangıç tarihi seç",
+    "pick_end_date": "Bitiş tarihi yok",
+    "frequency_daily": "Günlük",
+    "frequency_weekly": "Haftalık",
+    "frequency_monthly": "Aylık",
+    "frequency_yearly": "Yıllık"
   }
 }
