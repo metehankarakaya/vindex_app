@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:vindex_app/core/constants/app_strings.dart';
 import 'package:vindex_app/features/transactions/widgets/add_transaction_screen.dart';
 
+import '../../recurring/widgets/add_recurring_transaction_screen.dart';
+
 class AddTransactionModalScreen extends StatelessWidget {
   const AddTransactionModalScreen({super.key});
 
@@ -42,7 +44,7 @@ class AddTransactionModalScreen extends StatelessWidget {
                 physics: const NeverScrollableScrollPhysics(),
                 children: [
                   const AddTransactionScreen(),
-                  const Center(child: Text('Coming soon')),
+                  const AddRecurringTransactionScreen(),
                 ],
               ),
             ),
