@@ -1,11 +1,13 @@
 import 'package:dio/dio.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
+import 'package:vindex_app/core/models/recurring_model.dart';
+import 'package:vindex_app/core/providers/dio_provider.dart';
 
-import '../../../core/models/recurring_model.dart';
-import '../../../core/providers/dio_provider.dart';
+part 'recurring_service.g.dart';
 
 class RecurringService {
   final Dio _dio;
+
   RecurringService(this._dio);
 
   Future<List<RecurringModel>> getRecurrings() async {
@@ -28,7 +30,6 @@ class RecurringService {
   Future<void> deleteRecurring(String id) async {
     await _dio.delete('/recurrings/$id');
   }
-
 }
 
 @riverpod
