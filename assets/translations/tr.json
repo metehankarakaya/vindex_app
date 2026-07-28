@@ -26,6 +26,13 @@
   },
   "transactions": {
     "no_transactions_yet": "Henüz İşlem Yok",
-    "recurring_delete_blocked": "Bu işlem bir tekrarlayan şablondan oluşturuldu ve doğrudan silinemez."
+    "recurring_delete_blocked": "Bu işlem bir tekrarlayan şablondan oluşturuldu ve doğrudan silinemez.",
+    "tab_instant": "Anlık",
+    "save": "İşlemi Kaydet",
+    "save_error": "Kaydederken bir sorun oluştu. Lütfen tekrar deneyin.",
+    "description_hint": "Açıklama"
+  },
+  "common": {
+    "loading": "Yükleniyor"
   }
 }

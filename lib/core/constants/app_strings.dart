@@ -24,4 +24,11 @@ class AppStrings {
 
   static const transactionsNoTransactionsYet = 'transactions.no_transactions_yet';
   static const transactionsRecurringDeleteBlocked = 'transactions.recurring_delete_blocked';
+
+  static const transactionsTabInstant = 'transactions.tab_instant';
+  static const transactionsSave = 'transactions.save';
+  static const transactionsSaveError = 'transactions.save_error';
+  static const transactionsDescriptionHint = 'transactions.description_hint';
+
+  static const commonLoading = 'common.loading';
 }

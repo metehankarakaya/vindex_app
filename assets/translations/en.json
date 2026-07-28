@@ -26,6 +26,13 @@
   },
   "transactions": {
     "no_transactions_yet": "No Transactions Yet",
-    "recurring_delete_blocked": "This transaction was generated from a recurring template and cannot be deleted directly."
+    "recurring_delete_blocked": "This transaction was generated from a recurring template and cannot be deleted directly.",
+    "tab_instant": "Instant",
+    "save": "Save Transaction",
+    "save_error": "Something went wrong while saving. Please try again.",
+    "description_hint": "Description"
+  },
+  "common": {
+    "loading": "Loading"
   }
 }
