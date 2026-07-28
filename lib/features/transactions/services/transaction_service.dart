@@ -23,7 +23,6 @@ class TransactionService {
     double? minAmount,
     double? maxAmount,
     String? keyword,
-    String? sort,
   }) async {
     final response = await _dio.get(
       '/transactions',
@@ -37,7 +36,6 @@ class TransactionService {
         if (minAmount != null) 'minAmountCent': (minAmount * 100).round(),
         if (maxAmount != null) 'maxAmountCent': (maxAmount * 100).round(),
         if (keyword != null && keyword.isNotEmpty) 'keyword': keyword,
-        if (sort != null) 'sort': sort,
       },
     );
 
