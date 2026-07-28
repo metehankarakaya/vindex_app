@@ -1,5 +1,8 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:vindex_app/core/models/transaction_category.dart';
+
+import '../constants/app_strings.dart';
 
 IconData iconForCategory(TransactionCategory category) {
   switch (category) {
@@ -48,25 +51,24 @@ Color colorForCategory(TransactionCategory category) {
 }
 
 String labelForCategory(TransactionCategory category) {
-  // TODO: easy_localization kurulunca gerçek çeviri anahtarlarına çevrilecek
   switch (category) {
     case TransactionCategory.market:
-      return 'Market';
+      return AppStrings.categoryMarket.tr();
     case TransactionCategory.restaurant:
-      return 'Restaurant';
+      return AppStrings.categoryRestaurant.tr();
     case TransactionCategory.transportation:
-      return 'Transportation';
+      return AppStrings.categoryTransportation.tr();
     case TransactionCategory.subscriptions:
-      return 'Subscriptions';
+      return AppStrings.categorySubscriptions.tr();
     case TransactionCategory.bills:
-      return 'Bills';
+      return AppStrings.categoryBills.tr();
     case TransactionCategory.health:
-      return 'Health';
+      return AppStrings.categoryHealth.tr();
     case TransactionCategory.entertainment:
-      return 'Entertainment';
+      return AppStrings.categoryEntertainment.tr();
     case TransactionCategory.salary:
-      return 'Salary';
+      return AppStrings.categorySalary.tr();
     case TransactionCategory.other:
-      return 'Other';
+      return AppStrings.categoryOther.tr();
   }
 }

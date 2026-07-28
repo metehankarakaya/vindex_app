@@ -1,7 +1,9 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:vindex_app/features/transactions/widgets/transaction_list_item.dart';
 
+import '../../../core/constants/app_strings.dart';
 import '../../../core/models/transaction_type.dart';
 import '../../../core/widgets/empty_holder.dart';
 import '../providers/dashboard_summary_provider.dart';
@@ -80,7 +82,7 @@ class DashboardScreen extends ConsumerWidget {
                 child: Padding(
                   padding: const EdgeInsets.only(bottom: 8.0, top: 16.0),
                   child: Text(
-                    "Recent Transactions",
+                    AppStrings.dashboardRecentTransactions.tr(),
                     style: theme.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
                   ),
                 ),
@@ -93,7 +95,7 @@ class DashboardScreen extends ConsumerWidget {
                     hasScrollBody: false,
                     child: EmptyHolder(
                       iconData: Icons.receipt_long_outlined,
-                      title: "No Transactions Yet",
+                      title: AppStrings.dashboardNoTransactionsYet.tr(),
                     ),
                   );
                 }

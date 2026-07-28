@@ -1,6 +1,8 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../core/constants/app_strings.dart';
 import '../features/dashboard/screens/dashboard_screen.dart';
 import '../features/recurring/screens/recurring_screen.dart';
 import '../features/settings/screens/settings_screen.dart';
@@ -68,26 +70,26 @@ class ScaffoldWithBottomNav extends StatelessWidget {
             initialLocation: index == navigationShell.currentIndex
           );
         },
-        destinations: const [
+        destinations: [
           NavigationDestination(
-            icon: Icon(Icons.dashboard_outlined),
-            selectedIcon: Icon(Icons.dashboard),
-            label: "Dashboard",
+            icon: const Icon(Icons.dashboard_outlined),
+            selectedIcon: const Icon(Icons.dashboard),
+            label: AppStrings.navDashboard.tr(),
           ),
           NavigationDestination(
-            icon: Icon(Icons.receipt_long_outlined),
-            selectedIcon: Icon(Icons.receipt_long),
-            label: "Transactions",
+            icon: const Icon(Icons.receipt_long_outlined),
+            selectedIcon: const Icon(Icons.receipt_long),
+            label: AppStrings.navTransactions.tr(),
           ),
           NavigationDestination(
-            icon: Icon(Icons.repeat_outlined),
-            selectedIcon: Icon(Icons.repeat),
-            label: "Recurring",
+            icon: const Icon(Icons.repeat_outlined),
+            selectedIcon: const Icon(Icons.repeat),
+            label: AppStrings.navRecurring.tr(),
           ),
           NavigationDestination(
-            icon: Icon(Icons.settings_outlined),
-            selectedIcon: Icon(Icons.settings),
-            label: "Settings",
+            icon: const Icon(Icons.settings_outlined),
+            selectedIcon: const Icon(Icons.settings),
+            label: AppStrings.navSettings.tr(),
           ),
         ],
       ),

@@ -1,4 +1,7 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+
+import '../../../core/constants/app_strings.dart';
 
 class TotalBalanceTitle extends StatelessWidget {
   const TotalBalanceTitle({super.key});
@@ -29,7 +32,7 @@ class TotalBalanceTitle extends StatelessWidget {
           ),
           const SizedBox(width: 6),
           Text(
-            "Total Balance",
+            AppStrings.dashboardTotalBalance.tr(),
             style: theme.textTheme.labelMedium?.copyWith(
               color: theme.colorScheme.primary,
               fontWeight: FontWeight.bold,

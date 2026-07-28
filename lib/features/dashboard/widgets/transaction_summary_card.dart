@@ -1,6 +1,8 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../core/constants/app_strings.dart';
 import '../../../core/models/transaction_type.dart';
 import '../providers/dashboard_summary_provider.dart';
 
@@ -14,7 +16,7 @@ class TransactionSummaryCard extends ConsumerWidget {
     final isIncome = type == TransactionType.income;
     final color = isIncome ? Colors.green : Colors.red;
     final icon = isIncome ? Icons.arrow_upward_outlined : Icons.arrow_downward_outlined;
-    final label = isIncome ? 'Income' : 'Expense';
+    final label = isIncome ? AppStrings.dashboardIncome.tr() : AppStrings.dashboardExpense.tr();
 
     return Row(
       mainAxisSize: MainAxisSize.min,

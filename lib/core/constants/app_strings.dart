@@ -1,0 +1,24 @@
+class AppStrings {
+  AppStrings._();
+
+  static const navDashboard = 'nav.dashboard';
+  static const navTransactions = 'nav.transactions';
+  static const navRecurring = 'nav.recurring';
+  static const navSettings = 'nav.settings';
+
+  static const dashboardTotalBalance = 'dashboard.total_balance';
+  static const dashboardIncome = 'dashboard.income';
+  static const dashboardExpense = 'dashboard.expense';
+  static const dashboardRecentTransactions = 'dashboard.recent_transactions';
+  static const dashboardNoTransactionsYet = 'dashboard.no_transactions_yet';
+
+  static const categoryMarket = 'category.market';
+  static const categoryRestaurant = 'category.restaurant';
+  static const categoryTransportation = 'category.transportation';
+  static const categorySubscriptions = 'category.subscriptions';
+  static const categoryBills = 'category.bills';
+  static const categoryHealth = 'category.health';
+  static const categoryEntertainment = 'category.entertainment';
+  static const categorySalary = 'category.salary';
+  static const categoryOther = 'category.other';
+}
