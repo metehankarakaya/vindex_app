@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:vindex_app/features/transactions/widgets/transaction_list_item.dart';
 
 import '../../../core/models/transaction_type.dart';
 import '../../../core/widgets/empty_holder.dart';
@@ -103,12 +104,7 @@ class DashboardScreen extends ConsumerWidget {
                     separatorBuilder: (context, index) => const SizedBox(height: 8),
                     itemBuilder: (context, index) {
                       final transaction = summary.recentTransactions[index];
-                      return ListTile(
-                        contentPadding: EdgeInsets.zero,
-                        title: Text(transaction.title),
-                        subtitle: Text(transaction.category.name),
-                        trailing: Text('${transaction.amount.toStringAsFixed(2)} ₺'),
-                      );
+                      return TransactionListItem(transaction: transaction);
                     },
                   ),
                 );
