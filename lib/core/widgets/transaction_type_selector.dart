@@ -1,0 +1,51 @@
+import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/material.dart';
+import 'package:vindex_app/core/constants/app_colors.dart';
+import 'package:vindex_app/core/constants/app_strings.dart';
+import 'package:vindex_app/core/models/transaction_type.dart';
+
+class TransactionTypeSelector extends StatelessWidget {
+  final TransactionType selectedType;
+  final ValueChanged<TransactionType> onTypeSelected;
+
+  const TransactionTypeSelector({
+    super.key,
+    required this.selectedType,
+    required this.onTypeSelected,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final colorScheme = theme.colorScheme;
+
+    return SizedBox(
+      width: double.infinity,
+      child: SegmentedButton<TransactionType>(
+        segments: [
+          ButtonSegment(
+            value: TransactionType.expense,
+            label: Text(AppStrings.dashboardExpense.tr()),
+            icon: const Icon(Icons.arrow_downward, size: 18),
+          ),
+          ButtonSegment(
+            value: TransactionType.income,
+            label: Text(AppStrings.dashboardIncome.tr()),
+            icon: const Icon(Icons.arrow_upward, size: 18),
+          ),
+        ],
+        selected: {selectedType},
+        onSelectionChanged: (newSelection) => onTypeSelected(newSelection.first),
+        style: SegmentedButton.styleFrom(
+          side: BorderSide(color: colorScheme.outlineVariant),
+          selectedBackgroundColor: selectedType == TransactionType.expense
+            ? colorScheme.error.withValues(alpha: 0.1)
+            : AppColors.income.withValues(alpha: 0.1),
+          selectedForegroundColor: selectedType == TransactionType.expense
+            ? colorScheme.error
+            : AppColors.income,
+        ),
+      ),
+    );
+  }
+}
