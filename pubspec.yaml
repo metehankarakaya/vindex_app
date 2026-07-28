@@ -31,6 +31,24 @@ dependencies:
   flutter:
     sdk: flutter
 
+  # State management
+  flutter_riverpod: ^3.3.2
+  riverpod_annotation: 4.0.3
+
+  # Networking
+  dio: ^5.11.0
+
+  # Routing
+  go_router: ^17.3.0
+
+  # Localization
+  easy_localization: ^3.0.8
+
+  # Immutable models / JSON serialization
+  freezed_annotation: ^3.1.0
+  json_annotation: ^4.12.0
+
+
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
@@ -38,6 +56,12 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+  # Code generation
+  build_runner: ^2.4.13
+  riverpod_generator: ^4.0.4
+  freezed: ^3.2.5
+  json_serializable: ^6.14.0
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
