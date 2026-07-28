@@ -43,6 +43,12 @@
     "frequency_daily": "Daily",
     "frequency_weekly": "Weekly",
     "frequency_monthly": "Monthly",
-    "frequency_yearly": "Yearly"
+    "frequency_yearly": "Yearly",
+    "cancel_dialog_title": "Cancel this recurring item?",
+    "cancel_dialog_body": "This will stop future transactions from \"{title}\". Past transactions will remain in your history.",
+    "keep_it": "Keep it",
+    "cancel_it": "Cancel it",
+    "no_items_yet": "No Recurring Items Yet",
+    "unnamed_item": "this item"
   }
 }

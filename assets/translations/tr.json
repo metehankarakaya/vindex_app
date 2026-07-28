@@ -43,6 +43,12 @@
     "frequency_daily": "Günlük",
     "frequency_weekly": "Haftalık",
     "frequency_monthly": "Aylık",
-    "frequency_yearly": "Yıllık"
+    "frequency_yearly": "Yıllık",
+    "cancel_dialog_title": "Bu tekrarlayan işlemi iptal et?",
+    "cancel_dialog_body": "Bu, \"{title}\" için gelecekteki işlemleri durduracak. Geçmiş işlemler geçmişinizde kalacak.",
+    "keep_it": "Vazgeç",
+    "cancel_it": "İptal Et",
+    "no_items_yet": "Henüz Tekrarlayan İşlem Yok",
+    "unnamed_item": "bu öğe"
   }
 }

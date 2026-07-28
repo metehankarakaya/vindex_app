@@ -40,4 +40,10 @@ class AppStrings {
   static const recurringFrequencyWeekly = 'recurring.frequency_weekly';
   static const recurringFrequencyMonthly = 'recurring.frequency_monthly';
   static const recurringFrequencyYearly = 'recurring.frequency_yearly';
+  static const recurringCancelDialogTitle = 'recurring.cancel_dialog_title';
+  static const recurringCancelDialogBody = 'recurring.cancel_dialog_body';
+  static const recurringKeepIt = 'recurring.keep_it';
+  static const recurringCancelIt = 'recurring.cancel_it';
+  static const recurringNoItemsYet = 'recurring.no_items_yet';
+  static const recurringUnnamedItem = 'recurring.unnamed_item';
 }
