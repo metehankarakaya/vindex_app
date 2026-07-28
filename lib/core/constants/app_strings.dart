@@ -46,4 +46,19 @@ class AppStrings {
   static const recurringCancelIt = 'recurring.cancel_it';
   static const recurringNoItemsYet = 'recurring.no_items_yet';
   static const recurringUnnamedItem = 'recurring.unnamed_item';
+
+  static const filtersTitle = 'filters.title';
+  static const filtersCategory = 'filters.category';
+  static const filtersType = 'filters.type';
+  static const filtersTypeAll = 'filters.type_all';
+  static const filtersDateRange = 'filters.date_range';
+  static const filtersStartDate = 'filters.start_date';
+  static const filtersEndDate = 'filters.end_date';
+  static const filtersMinAmount = 'filters.min_amount';
+  static const filtersMaxAmount = 'filters.max_amount';
+  static const filtersKeyword = 'filters.keyword';
+  static const filtersKeywordHint = 'filters.keyword_hint';
+  static const filtersClear = 'filters.clear';
+  static const filtersApply = 'filters.apply';
+  static const filtersInvalidAmountRange = 'filters.invalid_amount_range';
 }

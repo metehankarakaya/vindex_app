@@ -50,5 +50,21 @@
     "cancel_it": "Cancel it",
     "no_items_yet": "No Recurring Items Yet",
     "unnamed_item": "this item"
+  },
+  "filters": {
+    "title": "Filters",
+    "category": "Category",
+    "type": "Type",
+    "type_all": "All",
+    "date_range": "Date Range",
+    "start_date": "From",
+    "end_date": "To",
+    "min_amount": "Min Amount",
+    "max_amount": "Max Amount",
+    "keyword": "Keyword",
+    "keyword_hint": "Search by description",
+    "clear": "Clear",
+    "apply": "Apply",
+    "invalid_amount_range": "Min amount cannot be greater than max amount"
   }
 }

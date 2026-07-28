@@ -50,5 +50,21 @@
     "cancel_it": "İptal Et",
     "no_items_yet": "Henüz Tekrarlayan İşlem Yok",
     "unnamed_item": "bu öğe"
+  },
+  "filters": {
+    "title": "Filtreler",
+    "category": "Kategori",
+    "type": "Tür",
+    "type_all": "Tümü",
+    "date_range": "Tarih Aralığı",
+    "start_date": "Başlangıç",
+    "end_date": "Bitiş",
+    "min_amount": "Min Tutar",
+    "max_amount": "Maks Tutar",
+    "keyword": "Anahtar Kelime",
+    "keyword_hint": "Açıklamaya göre ara",
+    "clear": "Temizle",
+    "apply": "Uygula",
+    "invalid_amount_range": "Min tutar, maks tutardan büyük olamaz"
   }
 }
