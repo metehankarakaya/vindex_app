@@ -7,6 +7,8 @@ import 'package:vindex_app/core/utils/category_utils.dart';
 import 'package:vindex_app/core/utils/date_formatter.dart';
 import 'package:vindex_app/features/transactions/widgets/category_icon_widget.dart';
 
+import '../../dashboard/providers/balance_visibility_provider.dart';
+
 class TransactionListItem extends ConsumerWidget {
   final TransactionModel transaction;
   const TransactionListItem({super.key, required this.transaction});
@@ -14,12 +16,17 @@ class TransactionListItem extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final formatter = ref.watch(currencyFormatterProvider);
+    final isVisible = ref.watch(balanceVisibilityProvider);
     final theme = Theme.of(context);
     final colorScheme = theme.colorScheme;
     final formattedAmount = formatter.format(transaction.amount);
 
     final bool isExpense = transaction.type == TransactionType.expense;
     final Color amountColor = isExpense ? colorScheme.error : Colors.green;
+
+    final displayAmount = isVisible
+        ? '${isExpense ? '-' : '+'}$formattedAmount'
+        : '******';
 
     return ListTile(
       leading: CategoryIconWidget(category: transaction.category),
@@ -29,7 +36,7 @@ class TransactionListItem extends ConsumerWidget {
           fit: BoxFit.scaleDown,
           alignment: Alignment.centerRight,
           child: Text(
-            '${isExpense ? '-' : '+'}$formattedAmount',
+            displayAmount,
             style: TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.bold,

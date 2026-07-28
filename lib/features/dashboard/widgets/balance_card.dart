@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../providers/balance_visibility_provider.dart';
 import '../providers/dashboard_summary_provider.dart';
 
 class BalanceCard extends ConsumerWidget {
@@ -9,6 +10,7 @@ class BalanceCard extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final summaryAsync = ref.watch(dashboardSummaryProvider);
+    final isVisible = ref.watch(balanceVisibilityProvider);
 
     return Row(
       children: [
@@ -18,7 +20,7 @@ class BalanceCard extends ConsumerWidget {
             alignment: Alignment.centerLeft,
             child: summaryAsync.when(
               data: (summary) => Text(
-                '${summary.balance.toStringAsFixed(2)} ₺',
+                isVisible ? '${summary.balance.toStringAsFixed(2)} ₺' : '****** ₺',
                 style: Theme.of(context).textTheme.headlineLarge?.copyWith(
                   fontWeight: FontWeight.bold,
                   letterSpacing: -1,
@@ -42,8 +44,8 @@ class BalanceCard extends ConsumerWidget {
         Padding(
           padding: const EdgeInsets.only(right: 8.0),
           child: IconButton(
-            onPressed: () {},
-            icon: Icon(Icons.visibility),
+            onPressed: () => ref.read(balanceVisibilityProvider.notifier).toggle(),
+            icon: Icon(isVisible ? Icons.visibility : Icons.visibility_off),
             visualDensity: VisualDensity.compact,
           ),
         )

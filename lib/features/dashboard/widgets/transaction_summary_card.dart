@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../core/constants/app_strings.dart';
 import '../../../core/models/transaction_type.dart';
+import '../providers/balance_visibility_provider.dart';
 import '../providers/dashboard_summary_provider.dart';
 
 class TransactionSummaryCard extends ConsumerWidget {
@@ -13,6 +14,7 @@ class TransactionSummaryCard extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final summaryAsync = ref.watch(dashboardSummaryProvider);
+    final isVisible = ref.watch(balanceVisibilityProvider);
     final isIncome = type == TransactionType.income;
     final color = isIncome ? Colors.green : Colors.red;
     final icon = isIncome ? Icons.arrow_upward_outlined : Icons.arrow_downward_outlined;
@@ -42,8 +44,9 @@ class TransactionSummaryCard extends ConsumerWidget {
                 child: summaryAsync.when(
                   data: (summary) {
                     final amount = isIncome ? summary.totalIncome : summary.totalExpense;
+                    final displayText = isVisible ? '${amount.toStringAsFixed(2)} ₺' : '****** ₺';
                     return Text(
-                      '${amount.toStringAsFixed(2)} ₺',
+                      displayText,
                       style: Theme.of(context).textTheme.titleMedium?.copyWith(
                         fontWeight: FontWeight.bold,
                       ),
