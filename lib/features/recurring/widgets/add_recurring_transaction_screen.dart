@@ -1,7 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:intl/intl.dart';
 import 'package:vindex_app/core/constants/app_colors.dart';
 import 'package:vindex_app/core/constants/app_strings.dart';
 import 'package:vindex_app/core/models/frequency.dart';
@@ -16,7 +15,8 @@ import 'package:vindex_app/core/widgets/date_picker_field.dart';
 import 'package:vindex_app/core/widgets/frequency_selector.dart';
 import 'package:vindex_app/core/widgets/save_transaction_button.dart';
 import 'package:vindex_app/core/widgets/transaction_type_selector.dart';
-import 'package:vindex_app/features/recurring/services/recurring_service.dart';
+
+import '../providers/recurrings_provider.dart';
 
 class AddRecurringTransactionScreen extends ConsumerStatefulWidget {
   const AddRecurringTransactionScreen({super.key});
@@ -103,7 +103,7 @@ class _AddRecurringTransactionScreenState extends ConsumerState<AddRecurringTran
         endDate: _endDate != null ? DateTime(_endDate!.year, _endDate!.month, _endDate!.day) : null,
       );
 
-      await ref.read(recurringServiceProvider).createRecurring(recurring);
+      await ref.read(recurringsProvider.notifier).createRecurring(recurring);
 
       if (mounted) Navigator.pop(context);
     } catch (e) {
