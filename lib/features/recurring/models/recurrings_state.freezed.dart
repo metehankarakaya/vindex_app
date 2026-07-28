@@ -1,0 +1,283 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
+
+part of 'recurrings_state.dart';
+
+// **************************************************************************
+// FreezedGenerator
+// **************************************************************************
+
+// dart format off
+T _$identity<T>(T value) => value;
+/// @nodoc
+mixin _$RecurringsState {
+
+ List<RecurringModel> get items; bool get isLoading; String? get errorMessage;
+/// Create a copy of RecurringsState
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$RecurringsStateCopyWith<RecurringsState> get copyWith => _$RecurringsStateCopyWithImpl<RecurringsState>(this as RecurringsState, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is RecurringsState&&const DeepCollectionEquality().equals(other.items, items)&&(identical(other.isLoading, isLoading) || other.isLoading == isLoading)&&(identical(other.errorMessage, errorMessage) || other.errorMessage == errorMessage));
+}
+
+
+@override
+int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(items),isLoading,errorMessage);
+
+@override
+String toString() {
+  return 'RecurringsState(items: $items, isLoading: $isLoading, errorMessage: $errorMessage)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class $RecurringsStateCopyWith<$Res>  {
+  factory $RecurringsStateCopyWith(RecurringsState value, $Res Function(RecurringsState) _then) = _$RecurringsStateCopyWithImpl;
+@useResult
+$Res call({
+ List<RecurringModel> items, bool isLoading, String? errorMessage
+});
+
+
+
+
+}
+/// @nodoc
+class _$RecurringsStateCopyWithImpl<$Res>
+    implements $RecurringsStateCopyWith<$Res> {
+  _$RecurringsStateCopyWithImpl(this._self, this._then);
+
+  final RecurringsState _self;
+  final $Res Function(RecurringsState) _then;
+
+/// Create a copy of RecurringsState
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? items = null,Object? isLoading = null,Object? errorMessage = freezed,}) {
+  return _then(_self.copyWith(
+items: null == items ? _self.items : items // ignore: cast_nullable_to_non_nullable
+as List<RecurringModel>,isLoading: null == isLoading ? _self.isLoading : isLoading // ignore: cast_nullable_to_non_nullable
+as bool,errorMessage: freezed == errorMessage ? _self.errorMessage : errorMessage // ignore: cast_nullable_to_non_nullable
+as String?,
+  ));
+}
+
+}
+
+
+/// Adds pattern-matching-related methods to [RecurringsState].
+extension RecurringsStatePatterns on RecurringsState {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _RecurringsState value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _RecurringsState() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _RecurringsState value)  $default,){
+final _that = this;
+switch (_that) {
+case _RecurringsState():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _RecurringsState value)?  $default,){
+final _that = this;
+switch (_that) {
+case _RecurringsState() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( List<RecurringModel> items,  bool isLoading,  String? errorMessage)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _RecurringsState() when $default != null:
+return $default(_that.items,_that.isLoading,_that.errorMessage);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( List<RecurringModel> items,  bool isLoading,  String? errorMessage)  $default,) {final _that = this;
+switch (_that) {
+case _RecurringsState():
+return $default(_that.items,_that.isLoading,_that.errorMessage);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( List<RecurringModel> items,  bool isLoading,  String? errorMessage)?  $default,) {final _that = this;
+switch (_that) {
+case _RecurringsState() when $default != null:
+return $default(_that.items,_that.isLoading,_that.errorMessage);case _:
+  return null;
+
+}
+}
+
+}
+
+/// @nodoc
+
+
+class _RecurringsState implements RecurringsState {
+  const _RecurringsState({final  List<RecurringModel> items = const [], this.isLoading = false, this.errorMessage}): _items = items;
+  
+
+ final  List<RecurringModel> _items;
+@override@JsonKey() List<RecurringModel> get items {
+  if (_items is EqualUnmodifiableListView) return _items;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(_items);
+}
+
+@override@JsonKey() final  bool isLoading;
+@override final  String? errorMessage;
+
+/// Create a copy of RecurringsState
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$RecurringsStateCopyWith<_RecurringsState> get copyWith => __$RecurringsStateCopyWithImpl<_RecurringsState>(this, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _RecurringsState&&const DeepCollectionEquality().equals(other._items, _items)&&(identical(other.isLoading, isLoading) || other.isLoading == isLoading)&&(identical(other.errorMessage, errorMessage) || other.errorMessage == errorMessage));
+}
+
+
+@override
+int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(_items),isLoading,errorMessage);
+
+@override
+String toString() {
+  return 'RecurringsState(items: $items, isLoading: $isLoading, errorMessage: $errorMessage)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$RecurringsStateCopyWith<$Res> implements $RecurringsStateCopyWith<$Res> {
+  factory _$RecurringsStateCopyWith(_RecurringsState value, $Res Function(_RecurringsState) _then) = __$RecurringsStateCopyWithImpl;
+@override @useResult
+$Res call({
+ List<RecurringModel> items, bool isLoading, String? errorMessage
+});
+
+
+
+
+}
+/// @nodoc
+class __$RecurringsStateCopyWithImpl<$Res>
+    implements _$RecurringsStateCopyWith<$Res> {
+  __$RecurringsStateCopyWithImpl(this._self, this._then);
+
+  final _RecurringsState _self;
+  final $Res Function(_RecurringsState) _then;
+
+/// Create a copy of RecurringsState
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? items = null,Object? isLoading = null,Object? errorMessage = freezed,}) {
+  return _then(_RecurringsState(
+items: null == items ? _self._items : items // ignore: cast_nullable_to_non_nullable
+as List<RecurringModel>,isLoading: null == isLoading ? _self.isLoading : isLoading // ignore: cast_nullable_to_non_nullable
+as bool,errorMessage: freezed == errorMessage ? _self.errorMessage : errorMessage // ignore: cast_nullable_to_non_nullable
+as String?,
+  ));
+}
+
+
+}
+
+// dart format on
