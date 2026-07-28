@@ -1,0 +1,27 @@
+{
+  "app_name": "Vindex",
+  "nav": {
+    "dashboard": "Dashboard",
+    "transactions": "Transactions",
+    "recurring": "Recurring",
+    "settings": "Settings"
+  },
+  "dashboard": {
+    "total_balance": "Total Balance",
+    "income": "Income",
+    "expense": "Expense",
+    "recent_transactions": "Recent Transactions",
+    "no_transactions_yet": "No Transactions Yet"
+  },
+  "category": {
+    "market": "Market",
+    "restaurant": "Restaurant",
+    "transportation": "Transportation",
+    "subscriptions": "Subscriptions",
+    "bills": "Bills",
+    "health": "Health",
+    "entertainment": "Entertainment",
+    "salary": "Salary",
+    "other": "Other"
+  }
+}

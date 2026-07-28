@@ -1,0 +1,27 @@
+{
+  "app_name": "Vindex",
+  "nav": {
+    "dashboard": "Anasayfa",
+    "transactions": "İşlemler",
+    "recurring": "Tekrarlayan",
+    "settings": "Ayarlar"
+  },
+  "dashboard": {
+    "total_balance": "Toplam Bakiye",
+    "income": "Gelir",
+    "expense": "Gider",
+    "recent_transactions": "Son İşlemler",
+    "no_transactions_yet": "Henüz İşlem Yok"
+  },
+  "category": {
+    "market": "Market",
+    "restaurant": "Restoran",
+    "transportation": "Ulaşım",
+    "subscriptions": "Abonelikler",
+    "bills": "Faturalar",
+    "health": "Sağlık",
+    "entertainment": "Eğlence",
+    "salary": "Maaş",
+    "other": "Diğer"
+  }
+}
