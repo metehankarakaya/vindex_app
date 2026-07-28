@@ -3,9 +3,12 @@ import 'package:vindex_app/features/transactions/models/transaction_filter.dart'
 import 'package:vindex_app/features/transactions/models/transactions_state.dart';
 import 'package:vindex_app/features/transactions/services/transaction_service.dart';
 
+import '../../../core/models/transaction_model.dart';
+import '../../dashboard/providers/dashboard_summary_provider.dart';
+
 part 'transactions_provider.g.dart';
 
-@riverpod
+@Riverpod(keepAlive: true)
 class Transactions extends _$Transactions {
   static const int _pageSize = 20;
 
@@ -30,7 +33,6 @@ class Transactions extends _$Transactions {
         minAmount: state.filter.minAmount,
         maxAmount: state.filter.maxAmount,
         keyword: state.filter.keyword,
-        sort: 'transactionDate,desc',
       );
 
       state = state.copyWith(
@@ -61,7 +63,6 @@ class Transactions extends _$Transactions {
         minAmount: state.filter.minAmount,
         maxAmount: state.filter.maxAmount,
         keyword: state.filter.keyword,
-        sort: 'transactionDate,desc',
       );
 
       state = state.copyWith(
@@ -88,5 +89,12 @@ class Transactions extends _$Transactions {
   void clearFilter() {
     state = state.copyWith(filter: const TransactionFilter());
     loadFirstPage();
+  }
+
+  Future<void> createTransaction(TransactionModel transaction) async {
+    final service = ref.read(transactionServiceProvider);
+    await service.createTransaction(transaction);
+    await loadFirstPage();
+    ref.invalidate(dashboardSummaryProvider);
   }
 }

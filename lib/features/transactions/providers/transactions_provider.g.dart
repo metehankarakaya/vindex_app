@@ -20,7 +20,7 @@ final class TransactionsProvider
         argument: null,
         retry: null,
         name: r'transactionsProvider',
-        isAutoDispose: true,
+        isAutoDispose: false,
         dependencies: null,
         $allTransitiveDependencies: null,
       );
@@ -41,7 +41,7 @@ final class TransactionsProvider
   }
 }
 
-String _$transactionsHash() => r'91360cd6f0559ca13c04c21ac3374c9310b94a30';
+String _$transactionsHash() => r'25ed3334e6f677b49d09a690d84dff534c2b9d0f';
 
 abstract class _$Transactions extends $Notifier<TransactionsState> {
   TransactionsState build();
