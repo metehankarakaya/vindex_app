@@ -21,4 +21,7 @@ class AppStrings {
   static const categoryEntertainment = 'category.entertainment';
   static const categorySalary = 'category.salary';
   static const categoryOther = 'category.other';
+
+  static const transactionsNoTransactionsYet = 'transactions.no_transactions_yet';
+  static const transactionsRecurringDeleteBlocked = 'transactions.recurring_delete_blocked';
 }

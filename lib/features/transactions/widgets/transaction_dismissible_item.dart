@@ -1,9 +1,12 @@
 import 'package:dio/dio.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:vindex_app/core/models/transaction_model.dart';
 import 'package:vindex_app/features/transactions/providers/transactions_provider.dart';
 import 'package:vindex_app/features/transactions/widgets/transaction_list_item.dart';
+
+import '../../../core/constants/app_strings.dart';
 
 class TransactionDismissibleItem extends ConsumerWidget {
   final TransactionModel transaction;
@@ -37,9 +40,9 @@ class TransactionDismissibleItem extends ConsumerWidget {
     } on DioException catch (e) {
       if (e.response?.statusCode == 409 && context.mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
+          SnackBar(
             content: Text(
-              'This transaction was generated from a recurring template and cannot be deleted directly.',
+              AppStrings.transactionsRecurringDeleteBlocked.tr()
             ),
           ),
         );

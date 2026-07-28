@@ -23,5 +23,9 @@
     "entertainment": "Entertainment",
     "salary": "Salary",
     "other": "Other"
+  },
+  "transactions": {
+    "no_transactions_yet": "No Transactions Yet",
+    "recurring_delete_blocked": "This transaction was generated from a recurring template and cannot be deleted directly."
   }
 }
