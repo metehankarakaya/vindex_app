@@ -6,6 +6,7 @@ import 'package:vindex_app/features/transactions/widgets/transaction_list_item.d
 import '../../../core/constants/app_strings.dart';
 import '../../../core/models/transaction_type.dart';
 import '../../../core/widgets/empty_holder.dart';
+import '../../transactions/widgets/add_transaction_modal.dart';
 import '../providers/dashboard_summary_provider.dart';
 import '../widgets/balance_card.dart';
 import '../widgets/total_balance_title.dart';
@@ -124,8 +125,8 @@ class DashboardScreen extends ConsumerWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: Icon(Icons.add),
+        onPressed: () => AddTransactionModal.show(context),
+        child: const Icon(Icons.add),
       ),
     );
   }
