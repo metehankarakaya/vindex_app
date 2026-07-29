@@ -66,5 +66,13 @@
     "clear": "Clear",
     "apply": "Apply",
     "invalid_amount_range": "Min amount cannot be greater than max amount"
+  },
+  "settings": {
+    "language": "Language",
+    "theme": "Theme",
+    "theme_system": "System",
+    "theme_light": "Light",
+    "theme_dark": "Dark",
+    "appearance": "Appearance"
   }
 }

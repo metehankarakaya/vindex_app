@@ -66,5 +66,13 @@
     "clear": "Temizle",
     "apply": "Uygula",
     "invalid_amount_range": "Min tutar, maks tutardan büyük olamaz"
+  },
+  "settings": {
+    "language": "Dil",
+    "theme": "Tema",
+    "theme_system": "Sistem",
+    "theme_light": "Açık",
+    "theme_dark": "Koyu",
+    "appearance": "Görünüm"
   }
 }

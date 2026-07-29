@@ -61,4 +61,11 @@ class AppStrings {
   static const filtersClear = 'filters.clear';
   static const filtersApply = 'filters.apply';
   static const filtersInvalidAmountRange = 'filters.invalid_amount_range';
+
+  static const settingsLanguage = 'settings.language';
+  static const settingsTheme = 'settings.theme';
+  static const settingsThemeSystem = 'settings.theme_system';
+  static const settingsThemeLight = 'settings.theme_light';
+  static const settingsThemeDark = 'settings.theme_dark';
+  static const settingsAppearance = 'settings.appearance';
 }
