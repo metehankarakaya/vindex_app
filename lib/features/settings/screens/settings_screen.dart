@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 import 'package:vindex_app/core/constants/app_strings.dart';
 import 'package:vindex_app/features/settings/widgets/language_selector.dart';
 import 'package:vindex_app/features/settings/widgets/theme_selector.dart';
@@ -64,6 +65,23 @@ class SettingsScreen extends ConsumerWidget {
                       onTap: () => LanguageSelector.show(context),
                     ),
                   ],
+                ),
+              ),
+            ),
+          ),
+          SliverSectionHeader(title: AppStrings.dataManagementTitle.tr().toUpperCase()),
+          SliverPadding(
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            sliver: SliverToBoxAdapter(
+              child: Card(
+                elevation: 0,
+                clipBehavior: Clip.antiAlias,
+                color: colorScheme.surfaceContainerLow,
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+                child: SettingsListItem(
+                  leadingIcon: Icons.storage_rounded,
+                  title: AppStrings.dataManagementTitle.tr(),
+                  onTap: () => context.push('/settings/data-management'),
                 ),
               ),
             ),
