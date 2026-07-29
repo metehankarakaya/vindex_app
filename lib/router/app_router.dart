@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 import '../core/constants/app_strings.dart';
 import '../features/dashboard/screens/dashboard_screen.dart';
 import '../features/recurring/screens/recurring_screen.dart';
+import '../features/settings/screens/data_management_screen.dart';
 import '../features/settings/screens/settings_screen.dart';
 import '../features/transactions/screens/transactions_screen.dart';
 
@@ -49,7 +50,11 @@ final appRouter = GoRouter(
           ]
         ),
       ]
-    )
+    ),
+    GoRoute(
+      path: '/settings/data-management',
+      builder: (context, state) => const DataManagementScreen(),
+    ),
   ]
 );
 
