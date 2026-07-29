@@ -75,5 +75,19 @@
     "theme_light": "Light",
     "theme_dark": "Dark",
     "appearance": "Appearance"
+  },
+  "data_management": {
+    "title": "Data Management",
+    "delete_transactions_title": "Delete All Transactions",
+    "delete_transactions_subtitle": "Permanently remove every transaction",
+    "delete_recurrings_title": "Delete All Recurring Items",
+    "delete_recurrings_subtitle": "Permanently remove every recurring item",
+    "confirm_title": "Are you sure?",
+    "confirm_transactions_body": "This will permanently delete all your transactions. This action cannot be undone.",
+    "confirm_recurrings_body": "This will permanently delete all your recurring items. Past transactions will remain, but future generation will stop. This action cannot be undone.",
+    "delete": "Delete",
+    "cancel": "Cancel",
+    "success_transactions": "All transactions deleted",
+    "success_recurrings": "All recurring items deleted"
   }
 }

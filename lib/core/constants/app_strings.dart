@@ -31,6 +31,7 @@ class AppStrings {
   static const transactionsDescriptionHint = 'transactions.description_hint';
 
   static const commonLoading = 'common.loading';
+  static const commonErrorPrefix = 'common.error_prefix';
 
   static const recurringStartDate = 'recurring.start_date';
   static const recurringEndDateOptional = 'recurring.end_date_optional';
@@ -69,5 +70,17 @@ class AppStrings {
   static const settingsThemeDark = 'settings.theme_dark';
   static const settingsAppearance = 'settings.appearance';
 
-  static const commonErrorPrefix = 'common.error_prefix';
+  static const dataManagementTitle = 'data_management.title';
+  static const dataManagementDeleteTransactionsTitle = 'data_management.delete_transactions_title';
+  static const dataManagementDeleteTransactionsSubtitle = 'data_management.delete_transactions_subtitle';
+  static const dataManagementDeleteRecurringsTitle = 'data_management.delete_recurrings_title';
+  static const dataManagementDeleteRecurringsSubtitle = 'data_management.delete_recurrings_subtitle';
+  static const dataManagementConfirmTitle = 'data_management.confirm_title';
+  static const dataManagementConfirmTransactionsBody = 'data_management.confirm_transactions_body';
+  static const dataManagementConfirmRecurringsBody = 'data_management.confirm_recurrings_body';
+  static const dataManagementDelete = 'data_management.delete';
+  static const dataManagementCancel = 'data_management.cancel';
+  static const dataManagementSuccessTransactions = 'data_management.success_transactions';
+  static const dataManagementSuccessRecurrings = 'data_management.success_recurrings';
+
 }

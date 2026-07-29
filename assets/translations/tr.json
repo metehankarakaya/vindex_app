@@ -75,5 +75,19 @@
     "theme_light": "Açık",
     "theme_dark": "Koyu",
     "appearance": "Görünüm"
+  },
+  "data_management": {
+    "title": "Veri Yönetimi",
+    "delete_transactions_title": "Tüm İşlemleri Sil",
+    "delete_transactions_subtitle": "Tüm işlemleri kalıcı olarak kaldır",
+    "delete_recurrings_title": "Tüm Tekrarlayan İşlemleri Sil",
+    "delete_recurrings_subtitle": "Tüm tekrarlayan işlemleri kalıcı olarak kaldır",
+    "confirm_title": "Emin misiniz?",
+    "confirm_transactions_body": "Bu, tüm işlemlerinizi kalıcı olarak silecek. Bu işlem geri alınamaz.",
+    "confirm_recurrings_body": "Bu, tüm tekrarlayan işlemlerinizi kalıcı olarak silecek. Geçmiş işlemler kalacak ama gelecekteki üretim duracak. Bu işlem geri alınamaz.",
+    "delete": "Sil",
+    "cancel": "Vazgeç",
+    "success_transactions": "Tüm işlemler silindi",
+    "success_recurrings": "Tüm tekrarlayan işlemler silindi"
   }
 }
