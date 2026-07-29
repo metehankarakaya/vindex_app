@@ -23,6 +23,7 @@ class _TransactionsScreenState extends ConsumerState<TransactionsScreen> {
   void initState() {
     super.initState();
     _scrollController.addListener(_onScroll);
+    Future.microtask(() => ref.read(transactionsProvider.notifier).loadFirstPage());
   }
 
   @override

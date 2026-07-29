@@ -14,7 +14,6 @@ class Transactions extends _$Transactions {
 
   @override
   TransactionsState build() {
-    Future.microtask(loadFirstPage);
     return const TransactionsState(isInitialLoading: true);
   }
 
@@ -97,4 +96,12 @@ class Transactions extends _$Transactions {
     await loadFirstPage();
     ref.invalidate(dashboardSummaryProvider);
   }
+
+  Future<void> deleteAllTransactions() async {
+    final service = ref.read(transactionServiceProvider);
+    await service.deleteAllTransactions();
+    state = state.copyWith(items: [], currentPage: 0, totalPages: 0);
+    ref.invalidate(dashboardSummaryProvider);
+  }
+
 }

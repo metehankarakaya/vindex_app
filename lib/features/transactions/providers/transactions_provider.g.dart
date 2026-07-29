@@ -41,7 +41,7 @@ final class TransactionsProvider
   }
 }
 
-String _$transactionsHash() => r'25ed3334e6f677b49d09a690d84dff534c2b9d0f';
+String _$transactionsHash() => r'3ac14c496199d2136843f00180bce0ee1d5505d7';
 
 abstract class _$Transactions extends $Notifier<TransactionsState> {
   TransactionsState build();

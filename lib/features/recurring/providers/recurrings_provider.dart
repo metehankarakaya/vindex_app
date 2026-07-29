@@ -7,9 +7,9 @@ part 'recurrings_provider.g.dart';
 
 @Riverpod(keepAlive: true)
 class Recurrings extends _$Recurrings {
+
   @override
   RecurringsState build() {
-    Future.microtask(loadAll);
     return const RecurringsState(isLoading: true);
   }
 
@@ -36,4 +36,11 @@ class Recurrings extends _$Recurrings {
     await service.deleteRecurring(id);
     state = state.copyWith(items: state.items.where((r) => r.id != id).toList());
   }
+
+  Future<void> deleteAllRecurrings() async {
+    final service = ref.read(recurringServiceProvider);
+    await service.deleteAllRecurrings();
+    state = state.copyWith(items: []);
+  }
+
 }

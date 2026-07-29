@@ -8,11 +8,22 @@ import '../widgets/recurring_cancel_dialog.dart';
 import '../widgets/recurring_list_item.dart';
 import '../widgets/recurrings_empty_state.dart';
 
-class RecurringScreen extends ConsumerWidget {
+class RecurringScreen extends ConsumerStatefulWidget {
   const RecurringScreen({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState<RecurringScreen> createState() => _RecurringScreenState();
+}
+
+class _RecurringScreenState extends ConsumerState<RecurringScreen> {
+  @override
+  void initState() {
+    super.initState();
+    Future.microtask(() => ref.read(recurringsProvider.notifier).loadAll());
+  }
+
+  @override
+  Widget build(BuildContext context) {
     final state = ref.watch(recurringsProvider);
     final theme = Theme.of(context);
 
@@ -41,9 +52,7 @@ class RecurringScreen extends ConsumerWidget {
             else if (state.errorMessage != null && state.items.isEmpty)
               SliverFillRemaining(
                 hasScrollBody: false,
-                child: Center(
-                  child: Text(AppStrings.commonErrorPrefix.tr(namedArgs: {'message': state.errorMessage!})),
-                ),
+                child: Center(child: Text(AppStrings.commonErrorPrefix.tr(namedArgs: {'message': state.errorMessage!}))),
               )
             else if (state.items.isEmpty)
                 const SliverFillRemaining(

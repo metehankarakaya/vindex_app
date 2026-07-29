@@ -41,7 +41,7 @@ final class RecurringsProvider
   }
 }
 
-String _$recurringsHash() => r'a42ded5db8505f9f22e00cf8e555e01ed3dcd4ad';
+String _$recurringsHash() => r'9fd8a0b8e3eee093d67c178f5de3c5d44ee11af2';
 
 abstract class _$Recurrings extends $Notifier<RecurringsState> {
   RecurringsState build();
