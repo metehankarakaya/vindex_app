@@ -33,7 +33,8 @@
     "description_hint": "Açıklama"
   },
   "common": {
-    "loading": "Yükleniyor"
+    "loading": "Yükleniyor",
+    "error_prefix": "Hata: {message}"
   },
   "recurring": {
     "start_date": "Başlangıç Tarihi",

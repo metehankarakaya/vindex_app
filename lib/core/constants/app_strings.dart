@@ -68,4 +68,6 @@ class AppStrings {
   static const settingsThemeLight = 'settings.theme_light';
   static const settingsThemeDark = 'settings.theme_dark';
   static const settingsAppearance = 'settings.appearance';
+
+  static const commonErrorPrefix = 'common.error_prefix';
 }

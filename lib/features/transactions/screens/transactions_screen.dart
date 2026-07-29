@@ -90,7 +90,9 @@ class _TransactionsScreenState extends ConsumerState<TransactionsScreen> {
             else if (state.errorMessage != null && state.items.isEmpty)
               SliverFillRemaining(
                 hasScrollBody: false,
-                child: Center(child: Text('Error: ${state.errorMessage}')),
+                child: Center(
+                  child: Text(AppStrings.commonErrorPrefix.tr(namedArgs: {'message': state.errorMessage!})),
+                ),
               )
             else if (state.items.isEmpty)
               const TransactionsEmptyState()

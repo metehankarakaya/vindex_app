@@ -33,7 +33,8 @@
     "description_hint": "Description"
   },
   "common": {
-    "loading": "Loading"
+    "loading": "Loading",
+    "error_prefix": "Error: {message}"
   },
   "recurring": {
     "start_date": "Start Date",

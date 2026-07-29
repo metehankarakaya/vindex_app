@@ -1,6 +1,8 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../core/constants/app_strings.dart';
 import '../providers/balance_visibility_provider.dart';
 import '../providers/dashboard_summary_provider.dart';
 
@@ -31,12 +33,12 @@ class BalanceCard extends ConsumerWidget {
                 width: 32,
                 child: CircularProgressIndicator.adaptive(strokeWidth: 3),
               ),
-              error: (error, stackTree) => Text(
-                "Error",
+              error: (error, stackTrace) => Text(
+                AppStrings.commonErrorPrefix.tr(namedArgs: {'message': error.toString()}),
                 style: Theme.of(context).textTheme.headlineLarge?.copyWith(
                   color: Theme.of(context).colorScheme.error,
                 ),
-              )
+              ),
             )
           ),
         ),
