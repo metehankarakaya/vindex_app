@@ -30,6 +30,11 @@ class RecurringService {
   Future<void> deleteRecurring(String id) async {
     await _dio.delete('/recurrings/$id');
   }
+
+  Future<void> deleteAllRecurrings() async {
+    await _dio.delete('/recurrings');
+  }
+
 }
 
 @riverpod

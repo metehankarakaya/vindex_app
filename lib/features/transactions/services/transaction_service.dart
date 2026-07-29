@@ -54,6 +54,10 @@ class TransactionService {
     await _dio.delete('/transactions/$id');
   }
 
+  Future<void> deleteAllTransactions() async {
+    await _dio.delete('/transactions');
+  }
+
   String _formatDate(DateTime date) {
     return '${date.year.toString().padLeft(4, '0')}-'
         '${date.month.toString().padLeft(2, '0')}-'
